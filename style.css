@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
+}
+
+/* HEADER */
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #e50914;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #b0060f;
+}
+
+/* MAIN */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+main > h2 {
+    text-align: center;
+    font-size: 28px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.card button {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background: #b0060f;
+}
+
+/* VIDEO */
+.video {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.video video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ARTICLE */
+.article {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.article h2,
+.article h3 {
+    text-align: center;
+}
+
+/* UPLOAD */
+.video-upload {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        width: 50%;
+        text-align: center;
+        padding: 12px 5px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .video,
+    .article,
+    .video-upload {
+        width: 95%;
+    }
+}

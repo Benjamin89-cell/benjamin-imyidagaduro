@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BENJAMIN IMYIDAGADURO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>BENJAMIN IMYIDAGADURO</h1>
+    <p>Amakuru mashya y'imyidagaduro, films, music n'abahanzi.</p>
+</header>
+
+<nav>
+    <a href="#">Ahabanza</a>
+    <a href="music.html">Music</a>
+    <a href="#">Films</a>
+    <a href="#">Abahanzi</a>
+</nav>
+
+<main>
+
+    <h2>Amakuru Mashya</h2>
+
+    <div class="cards">
+
+        <div class="card">
+    <h2>🎵 Music</h2>
+    <p>Menya amakuru mashya y'abahanzi n'indirimbo.</p>
+
+    <a href="music.html">
+        <button>Soma byinshi</button>
+    </a>
+</div>
+
+    <div class="card">
+    <h2>🎬 Films</h2>
+    <p>Amakuru mashya ya films na series.</p>
+
+    <a href="films.html">
+        <button>Soma byinshi</button>
+    </a>
+</div>
+
+        <div class="card">
+    <h2>🎤 Abahanzi</h2>
+    <p>Menya abahanzi n'indirimbo zabo.</p>
+
+    <a href="abahanzi.html">
+        <button>Soma byinshi</button>
+    </a>
+</div>
+
+    </div>
+
+</main>
+
+<!-- VIDEO YA MBERE -->
+<section class="video">
+    <h2>Video nshya</h2>
+
+    <video controls width="600">
+        <source src="video1.mp4" type="video/mp4">
+        Browser yawe ntishobora gukina iyi video.
+    </video>
+
+    <h3>Video ya mbere ya BENJAMIN IMYIDAGADURO</h3>
+
+    <p>Reba video nshya kuri BENJAMIN IMYIDAGADURO.</p>
+</section>
+<section class="video">
+    <h2>Video ya kabiri</h2>
+
+    <video controls width="600">
+        <source src="video2.mp4" type="video/mp4">
+        Browser yawe ntishobora gukina iyi video.
+    </video>
+
+    <h3>Video nshya kuri BENJAMIN IMYIDAGADURO</h3>
+
+    <p>Reba video nshya kuri BENJAMIN IMYIDAGADURO.</p>
+</section>
+
+
+
+<!-- AMAKURU -->
+<section class="article">
+    <h2>Amakuru Mashya</h2>
+
+    <h3>Amakuru mashya y'imyidagaduro</h3>
+
+    <p>
+        Murakaza neza kuri BENJAMIN IMYIDAGADURO.
+        Aha tuzajya tubagezaho amakuru mashya y'abahanzi,
+        music, films n'ibindi bikorwa by'imyidagaduro.
+    </p>
+</section>
+
+<!-- UPLOAD VIDEO -->
+<section class="video-upload">
+    <h2>Shyiramo Video</h2>
+
+    <input type="file" id="videoInput" accept="video/*">
+
+    <div id="videoPreview"></div>
+</section>
+
+<script>
+    const videoInput = document.getElementById("videoInput");
+    const videoPreview = document.getElementById("videoPreview");
+
+    videoInput.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (file) {
+            const video = document.createElement("video");
+
+            video.src = URL.createObjectURL(file);
+            video.controls = true;
+            video.width = 500;
+
+            videoPreview.innerHTML = "";
+            videoPreview.appendChild(video);
+        }
+    });
+</script>
+
+</body>
+</html>

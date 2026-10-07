@@ -1,0 +1,94 @@
+```html
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Music</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .music-box {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cover {
+            width: 300px;
+            max-width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #111;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #e50914;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back:hover {
+            background: #b0060f;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎵 BENJAMIN MUSIC</h1>
+    <p>Umuziki n'indirimbo nshya</p>
+</header>
+
+<div class="music-box">
+
+    <img src="caver.jpg" alt="Cover y'indirimbo" class="cover">
+
+    <h2>Indirimbo ya Benjamin</h2>
+
+    <audio controls>
+        <source src="imyidagaduro.mp3" type="audio/mpeg">
+        Browser yawe ntishobora gukina iyi ndirimbo.
+    </audio>
+
+    <br>
+
+    <a href="index.html" class="back">⬅️ Ahabanza</a>
+
+</div>
+
+</body>
+</html>
