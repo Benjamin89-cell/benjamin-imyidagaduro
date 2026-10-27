@@ -29,7 +29,7 @@ header p {
 
 /* NAVIGATION */
 nav {
-    background: #e50914;
+    background: #09e565;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #b0060f;
+    background: #06b052;
 }
 
 /* MAIN */
@@ -84,7 +84,7 @@ main > h2 {
 }
 
 .card button {
-    background: #e50914;
+    background: #73e509;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -94,7 +94,7 @@ main > h2 {
 }
 
 .card button:hover {
-    background: #b0060f;
+    background: #06b039;
 }
 
 /* VIDEO */
@@ -165,4 +165,45 @@ main > h2 {
     .video-upload {
         width: 95%;
     }
+}
+/* CONTACT US */
+.contact {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px 15px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    color: #111;
+}
+
+.contact p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.contact .whatsapp {
+    background: #4b25d3;
+}
+
+.contact .email {
+    background: #09e52e;
+}
+
+.contact a:hover {
+    opacity: 0.85;
 }
