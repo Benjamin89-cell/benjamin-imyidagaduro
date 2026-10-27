@@ -1,110 +1,305 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="rw">
 <head>
-    <title>BENJAMIN IMYIDAGADURO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BENJAMIN IMYIDAGADURO | Music, Films n'Abahanzi</title>
+
+    <meta name="description" content="BENJAMIN IMYIDAGADURO: amakuru mashya y'imyidagaduro, music, films, videos n'abahanzi.">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08SXPJ8XW9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-08SXPJ8XW9');
+    </script>
+
+    <!-- Imiterere y'inyongera -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #14532d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+        }
+
+        nav {
+            background: #166534;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #bbf7d0;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 100%;
+            max-width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000018;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #166534;
+        }
+
+        button {
+            background: #15803d;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #14532d;
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .video, .article, .video-upload {
+            background: white;
+            max-width: 900px;
+            width: calc(100% - 30px);
+            margin: 25px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000012;
+        }
+
+        .video video, #videoPreview video {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .article a {
+            color: #166534;
+            font-weight: bold;
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin: 5px 0;
+            padding: 10px 15px;
+            background: #15803d;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .contact-link:hover {
+            background: #14532d;
+        }
+
+        footer {
+            background: #14532d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            main {
+                padding: 15px 10px;
+            }
+
+            .video, .article, .video-upload {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+<header id="ahabanza">
     <h1>BENJAMIN IMYIDAGADURO</h1>
     <p>Amakuru mashya y'imyidagaduro, films, music n'abahanzi.</p>
 </header>
 
 <nav>
-    <a href="#">Ahabanza</a>
+    <a href="index.html">Ahabanza</a>
     <a href="music.html">Music</a>
-    <a href="#">Films</a>
-    <a href="#">Abahanzi</a>
+    <a href="films.html">Films</a>
+    <a href="abahanzi.html">Abahanzi</a>
 </nav>
 
 <main>
-
     <h2>Amakuru Mashya</h2>
 
     <div class="cards">
 
         <div class="card">
-    <h2>🎵 Music</h2>
-    <p>Menya amakuru mashya y'abahanzi n'indirimbo.</p>
-
-    <a href="music.html">
-        <button>Soma byinshi</button>
-    </a>
-</div>
-
-    <div class="card">
-    <h2>🎬 Films</h2>
-    <p>Amakuru mashya ya films na series.</p>
-
-    <a href="films.html">
-        <button>Soma byinshi</button>
-    </a>
-</div>
+            <h2>🎵 Music</h2>
+            <p>Menya amakuru mashya y'abahanzi n'indirimbo.</p>
+            <a href="music.html">
+                <button type="button">Soma byinshi</button>
+            </a>
+        </div>
 
         <div class="card">
-    <h2>🎤 Abahanzi</h2>
-    <p>Menya abahanzi n'indirimbo zabo.</p>
+            <h2>🎬 Films</h2>
+            <p>Amakuru mashya ya films na series.</p>
+            <a href="films.html">
+                <button type="button">Soma byinshi</button>
+            </a>
+        </div>
 
-    <a href="abahanzi.html">
-        <button>Soma byinshi</button>
-    </a>
-</div>
+        <div class="card">
+            <h2>🎤 Abahanzi</h2>
+            <p>Menya abahanzi n'indirimbo zabo.</p>
+            <a href="abahanzi.html">
+                <button type="button">Soma byinshi</button>
+            </a>
+        </div>
 
     </div>
-
 </main>
 
 <!-- VIDEO YA MBERE -->
 <section class="video">
-    <h2>Video nshya</h2>
+    <h2>🎬 Video ya mbere</h2>
 
-    <video controls width="600">
+    <video controls preload="metadata" playsinline>
         <source src="video1.mp4" type="video/mp4">
         Browser yawe ntishobora gukina iyi video.
     </video>
 
     <h3>Video ya mbere ya BENJAMIN IMYIDAGADURO</h3>
-
     <p>Reba video nshya kuri BENJAMIN IMYIDAGADURO.</p>
 </section>
-<section class="video">
-    <h2>Video ya kabiri</h2>
 
-    <video controls width="600">
+<!-- VIDEO YA KABIRI -->
+<section class="video">
+    <h2>🎬 Video ya kabiri</h2>
+
+    <video controls preload="metadata" playsinline>
         <source src="video2.mp4" type="video/mp4">
         Browser yawe ntishobora gukina iyi video.
     </video>
 
     <h3>Video nshya kuri BENJAMIN IMYIDAGADURO</h3>
-
-    <p>Reba video nshya kuri BENJAMIN IMYIDAGADURO.</p>
+    <p>Komeza gukurikirana video zacu nshya.</p>
 </section>
-
-
 
 <!-- AMAKURU -->
 <section class="article">
-    <h2>Amakuru Mashya</h2>
+    <h2>📰 Amakuru Mashya</h2>
 
-    <h3>Amakuru mashya y'imyidagaduro</h3>
+    <h3>Amakuru y'imyidagaduro</h3>
 
     <p>
         Murakaza neza kuri BENJAMIN IMYIDAGADURO.
         Aha tuzajya tubagezaho amakuru mashya y'abahanzi,
-        music, films n'ibindi bikorwa by'imyidagaduro.
+        music, films, videos n'ibindi bikorwa by'imyidagaduro.
     </p>
 </section>
 
-<!-- UPLOAD VIDEO -->
+<!-- GUSUZUMA VIDEO YO KURI MUDASOBWA -->
 <section class="video-upload">
-    <h2>Shyiramo Video</h2>
+    <h2>▶️ Reba Video yo muri Mudasobwa yawe</h2>
+
+    <p>
+        Hitamo video iri kuri mudasobwa yawe kugira ngo uyirebe.
+        Iyi video igaragara kuri mudasobwa yawe gusa; ntiyoherezwa kuri website.
+    </p>
 
     <input type="file" id="videoInput" accept="video/*">
-
     <div id="videoPreview"></div>
 </section>
+
+<!-- CONTACT -->
+<section class="article" id="contact">
+    <h2>📞 Twandikire</h2>
+
+    <p>Ufite ikibazo cyangwa igitekerezo? Twandikire.</p>
+
+    <p>
+        <a class="contact-link"
+           href="https://wa.me/250738280217"
+           target="_blank"
+           rel="noopener noreferrer">
+            💬 Twandikire kuri WhatsApp
+        </a>
+    </p>
+
+    <p>
+        <a class="contact-link"
+           href="mailto:benjaminnibishaka2@gmail.com">
+            ✉️ Twandikire kuri Email
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 BENJAMIN IMYIDAGADURO. Uburenganzira bwose burabitswe.</p>
+    <p><a href="#ahabanza" style="color:white;">Subira hejuru ↑</a></p>
+</footer>
 
 <script>
     const videoInput = document.getElementById("videoInput");
@@ -118,7 +313,7 @@
 
             video.src = URL.createObjectURL(file);
             video.controls = true;
-            video.width = 500;
+            video.playsInline = true;
 
             videoPreview.innerHTML = "";
             videoPreview.appendChild(video);
