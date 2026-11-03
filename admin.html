@@ -1,0 +1,1002 @@
+
+<!DOCTYPE html>
+<html lang="rw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BENJAMIN DIGITAL | Admin Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        button, input, textarea, select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* LOGIN */
+
+        #loginPage {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #071b35, #087f5b);
+        }
+
+        .login-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px #0003;
+        }
+
+        .login-box h1 {
+            color: #087f5b;
+            margin-bottom: 10px;
+        }
+
+        .login-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .login-box p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 13px;
+            background: #087f5b;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #loginMessage {
+            color: red;
+            margin-top: 15px;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #071b35;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            color: #10b981;
+        }
+
+        .logout {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+        }
+
+        /* LAYOUT */
+
+        #dashboard {
+            display: none;
+        }
+
+        .layout {
+            display: flex;
+            min-height: calc(100vh - 75px);
+        }
+
+        aside {
+            width: 230px;
+            background: #10243e;
+            padding: 25px 15px;
+            flex-shrink: 0;
+        }
+
+        aside button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 7px;
+            margin-bottom: 8px;
+        }
+
+        aside button:hover,
+        aside button.active {
+            background: #087f5b;
+        }
+
+        main {
+            flex: 1;
+            padding: 30px;
+            min-width: 0;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+        }
+
+        .welcome h1 {
+            margin-bottom: 10px;
+        }
+
+        /* DASHBOARD CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000008;
+        }
+
+        .card h3 {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card h1 {
+            color: #087f5b;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 18px;
+        }
+
+        .section p {
+            line-height: 1.8;
+        }
+
+        .green-btn {
+            background: #087f5b;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+            margin-top: 15px;
+        }
+
+        .blue-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+            margin-top: 15px;
+        }
+
+        .red-btn {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 7px;
+        }
+
+        /* SERVICES */
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .service {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #087f5b;
+        }
+
+        .service p {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .service-search {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            margin-top: 15px;
+        }
+
+        /* FORMS */
+
+        .admin-form input,
+        .admin-form textarea,
+        .admin-form select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+        }
+
+        /* TABLE */
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 13px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+        }
+
+        /* STATUS */
+
+        .status {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .notice {
+            background: #fff7ed;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .layout {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 12px;
+            }
+
+            aside button {
+                width: auto;
+                margin: 3px;
+                font-size: 13px;
+                padding: 10px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            header {
+                padding: 18px;
+            }
+
+            .section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+
+    <div id="loginPage">
+
+        <div class="login-box">
+
+            <h1>BENJAMIN DIGITAL</h1>
+
+            <h2>Admin Login</h2>
+
+            <p>Welcome to your administration panel</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Admin Username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Admin Password"
+                    required
+                >
+
+                <button type="submit" class="login-btn">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <div id="loginMessage"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADMIN DASHBOARD -->
+
+    <div id="dashboard">
+
+        <header>
+
+            <div>
+                <h2>BENJAMIN DIGITAL</h2>
+                <p>Administration Dashboard</p>
+            </div>
+
+            <button class="logout" onclick="logout()">
+                Logout
+            </button>
+
+        </header>
+
+
+        <div class="layout">
+
+
+            <!-- SIDEBAR -->
+
+            <aside>
+
+                <button class="active" onclick="showSection('home', this)">
+                    🏠 Dashboard
+                </button>
+
+                <button onclick="showSection('services', this)">
+                    🛠️ Services
+                </button>
+
+                <button onclick="showSection('visitors', this)">
+                    📊 Website Visitors
+                </button>
+
+                <button onclick="showSection('comments', this)">
+                    💬 Comments
+                </button>
+
+                <button onclick="showSection('ai', this)">
+                    🤖 ASK BENJAMIN AI
+                </button>
+
+                <button onclick="showSection('settings', this)">
+                    ⚙️ Settings
+                </button>
+
+                <button onclick="window.open('index.html', '_blank')">
+                    🌐 Visit Website
+                </button>
+
+            </aside>
+
+
+            <!-- MAIN CONTENT -->
+
+            <main>
+
+
+                <!-- HOME DASHBOARD -->
+
+                <div id="home" class="content active">
+
+                    <div class="welcome">
+
+                        <h1>Welcome, Admin!</h1>
+
+                        <p>
+                            Manage your BENJAMIN DIGITAL platform
+                            from one place.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cards">
+
+                        <div class="card">
+
+                            <h3>🛠️ Total Services</h3>
+
+                            <h1 id="totalServices">84+</h1>
+
+                            <p>Planned platform services</p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>👥 Total Visitors</h3>
+
+                            <h1 id="totalVisitors">--</h1>
+
+                            <p>All-time visitors</p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>📅 Today's Visitors</h3>
+
+                            <h1 id="todayVisitors">--</h1>
+
+                            <p>Visitors today</p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>🟢 Active Visitors</h3>
+
+                            <h1 id="activeVisitors">--</h1>
+
+                            <p>Last 30 minutes</p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>📄 Page Views</h3>
+
+                            <h1 id="pageViews">--</h1>
+
+                            <p>Total pages viewed</p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>🌐 Website Status</h3>
+
+                            <h1 style="font-size:20px;">Online</h1>
+
+                            <p>Platform status</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="section">
+
+                        <h2>Platform Overview</h2>
+
+                        <p>
+                            BENJAMIN DIGITAL is an all-in-one platform
+                            designed to help Rwandans access useful
+                            digital services.
+                        </p>
+
+                        <p>
+                            Vision: One Platform. Many Solutions.
+                        </p>
+
+                        <p>
+                            ASK BENJAMIN AI: Your digital assistant.
+                        </p>
+
+                    </div>
+
+
+                    <div class="section">
+
+                        <h2>📈 Website Traffic</h2>
+
+                        <p>
+                            Monitor visitors and traffic on
+                            BENJAMIN DIGITAL.
+                        </p>
+
+                        <button class="green-btn"
+                            onclick="openAnalytics()">
+
+                            Open Google Analytics
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div id="services" class="content">
+
+                    <div class="section">
+
+                        <h2>🛠️ Manage Services</h2>
+
+                        <p>
+                            Search and view the services planned
+                            for BENJAMIN DIGITAL.
+                        </p>
+
+                        <input
+                            type="text"
+                            id="serviceSearch"
+                            class="service-search"
+                            placeholder="Search services..."
+                            oninput="searchServices()"
+                        >
+
+                        <div class="service-list" id="serviceList">
+
+                            <div class="service">ASK BENJAMIN AI</div>
+                            <div class="service">BENJAMIN HEALTH</div>
+                            <div class="service">BENJAMIN MARKET</div>
+                            <div class="service">BENJAMIN JOBS</div>
+                            <div class="service">BENJAMIN EDUCATION</div>
+                            <div class="service">BENJAMIN TRANSPORT</div>
+                            <div class="service">BENJAMIN LEGAL HELP</div>
+                            <div class="service">BENJAMIN CYBER SAFETY</div>
+                            <div class="service">BENJAMIN SCHOLARSHIPS</div>
+                            <div class="service">BENJAMIN STARTUP SUPPORT</div>
+                            <div class="service">BENJAMIN INSURANCE & PENSION</div>
+                            <div class="service">BENJAMIN AMAKURU MU BATURANGE</div>
+                            <div class="service">BENJAMIN CONSUMER PROTECTION</div>
+                            <div class="service">BENJAMIN MENTAL WELLNESS</div>
+                            <div class="service">BENJAMIN ENERGY</div>
+                            <div class="service">BENJAMIN FINANCIAL EDUCATION</div>
+                            <div class="service">BENJAMIN NUTRITION</div>
+                            <div class="service">BENJAMIN FARMER SUPPORT</div>
+                            <div class="service">BENJAMIN SOCIAL SUPPORT</div>
+                            <div class="service">BENJAMIN CIVIC ENGAGEMENT</div>
+                            <div class="service">BENJAMIN EARLY CHILDHOOD</div>
+                            <div class="service">BENJAMIN RRA</div>
+                            <div class="service">BENJAMIN IREMBO</div>
+                            <div class="service">BENJAMIN IMIKINO</div>
+                            <div class="service">BENJAMIN COMMUNITY HELP</div>
+
+                        </div>
+
+                        <button class="green-btn"
+                            onclick="alert('Service management will be connected to a database.')">
+
+                            Add New Service
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WEBSITE VISITORS -->
+
+                <div id="visitors" class="content">
+
+                    <div class="section">
+
+                        <h2>📊 Website Visitors</h2>
+
+                        <p>
+                            Visitor statistics for BENJAMIN DIGITAL.
+                        </p>
+
+                        <div class="cards" style="margin-top:25px;">
+
+                            <div class="card">
+
+                                <h3>Total Visitors</h3>
+
+                                <h1>--</h1>
+
+                            </div>
+
+                            <div class="card">
+
+                                <h3>Today's Visitors</h3>
+
+                                <h1>--</h1>
+
+                            </div>
+
+                            <div class="card">
+
+                                <h3>Active Visitors</h3>
+
+                                <h1>--</h1>
+
+                            </div>
+
+                            <div class="card">
+
+                                <h3>Page Views</h3>
+
+                                <h1>--</h1>
+
+                            </div>
+
+                        </div>
+
+                        <button class="green-btn"
+                            onclick="openAnalytics()">
+
+                            Open Google Analytics
+
+                        </button>
+
+                        <div class="notice">
+
+                            Visitor statistics will appear here
+                            after Google Analytics is connected.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMMENTS -->
+
+                <div id="comments" class="content">
+
+                    <div class="section">
+
+                        <h2>💬 Manage Comments</h2>
+
+                        <p>
+                            Comments from website visitors
+                            will be managed here.
+                        </p>
+
+                        <div class="notice">
+
+                            Comments are not yet connected
+                            to a database.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ASK BENJAMIN AI -->
+
+                <div id="ai" class="content">
+
+                    <div class="section">
+
+                        <h2>🤖 ASK BENJAMIN AI</h2>
+
+                        <p>
+                            Manage the AI assistant for
+                            BENJAMIN DIGITAL.
+                        </p>
+
+                        <div class="cards" style="margin-top:20px;">
+
+                            <div class="card">
+
+                                <h3>AI Assistant</h3>
+
+                                <h1 style="font-size:20px;">Planned</h1>
+
+                                <p>AI integration status</p>
+
+                            </div>
+
+                            <div class="card">
+
+                                <h3>Languages</h3>
+
+                                <h1 style="font-size:20px;">Multilingual</h1>
+
+                                <p>Language support</p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="green-btn"
+                            onclick="alert('AI settings will be connected later.')">
+
+                            AI Settings
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SETTINGS -->
+
+                <div id="settings" class="content">
+
+                    <div class="section">
+
+                        <h2>⚙️ Admin Settings</h2>
+
+                        <p>
+                            Website: BENJAMIN DIGITAL
+                        </p>
+
+                        <p>
+                            Vision: One Platform. Many Solutions.
+                        </p>
+
+                        <p>
+                            Admin account: Administrator
+                        </p>
+
+                        <div class="notice">
+
+                            This is a demonstration Admin panel.
+                            Secure authentication and database
+                            integration will be added before
+                            public deployment.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </main>
+
+        </div>
+
+
+        <footer>
+
+            © 2026 BENJAMIN DIGITAL |
+            One Platform. Many Solutions.
+
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // DEMO LOGIN ONLY
+        // NOT SECURE FOR A LIVE WEBSITE
+
+        const demoUsername = "admin";
+        const demoPassword = "admin123";
+
+
+        // LOGIN
+
+        document.getElementById("loginForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+
+            if (
+                username === demoUsername &&
+                password === demoPassword
+            ) {
+
+                document.getElementById("loginPage").style.display = "none";
+
+                document.getElementById("dashboard").style.display = "block";
+
+                document.getElementById("loginMessage").textContent = "";
+
+            } else {
+
+                document.getElementById("loginMessage").textContent =
+                    "Incorrect username or password!";
+
+            }
+
+        });
+
+
+        // LOGOUT
+
+        function logout() {
+
+            document.getElementById("dashboard").style.display = "none";
+
+            document.getElementById("loginPage").style.display = "flex";
+
+            document.getElementById("loginForm").reset();
+
+        }
+
+
+        // NAVIGATION
+
+        function showSection(sectionId, button) {
+
+            const sections =
+                document.querySelectorAll(".content");
+
+            sections.forEach(function(section) {
+
+                section.classList.remove("active");
+
+            });
+
+
+            document.getElementById(sectionId)
+            .classList.add("active");
+
+
+            const buttons =
+                document.querySelectorAll("aside button");
+
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            if (button) {
+
+                button.classList.add("active");
+
+            }
+
+        }
+
+
+        // SERVICE SEARCH
+
+        function searchServices() {
+
+            const searchValue =
+                document.getElementById("serviceSearch")
+                .value.toLowerCase();
+
+            const services =
+                document.querySelectorAll("#serviceList .service");
+
+
+            services.forEach(function(service) {
+
+                const serviceName =
+                    service.textContent.toLowerCase();
+
+                if (serviceName.includes(searchValue)) {
+
+                    service.style.display = "block";
+
+                } else {
+
+                    service.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        // GOOGLE ANALYTICS
+
+        function openAnalytics() {
+
+            window.open(
+                "https://analytics.google.com/",
+                "_blank"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
