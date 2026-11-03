@@ -2,938 +2,310 @@
 <!DOCTYPE html>
 <html lang="rw">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BENJAMIN DIGITAL | One Platform. Many Solutions.</title>
+<meta name="description" content="BENJAMIN DIGITAL ni urubuga ruhuriza hamwe serivisi zifasha abaturarwanda.">
+<meta name="theme-color" content="#09233f">
 
-  <title>BENJAMIN IMYIDAGADURO | BENJAMIN DIGITAL</title>
-
-  <meta name="description" content="BENJAMIN IMYIDAGADURO na BENJAMIN DIGITAL. Music, Films, Abahanzi, amakuru na services zifasha abaturarwanda.">
-  <meta name="robots" content="index, follow">
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-08SXPJ8XW9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-08SXPJ8XW9');
-  </script>
-
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #222;
-    }
-    header {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px 12px;
-    }
-    header h1 { margin: 0 0 10px; }
-    nav {
-      background: #09e565;
-      padding: 13px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 7px 10px;
-      display: inline-block;
-    }
-    section { padding: 25px 15px; }
-    .section-title {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .intro {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      line-height: 1.7;
-    }
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 17px;
-    }
-    .card {
-      background: white;
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 2px 9px #00000012;
-    }
-    .card h3 { margin-top: 0; }
-    .card p { line-height: 1.6; }
-    .btn {
-      display: inline-block;
-      border: 0;
-      border-radius: 7px;
-      padding: 10px 14px;
-      margin: 5px 4px 5px 0;
-      background: #09b957;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .btn.secondary { background: #222; }
-    .btn.blue { background: #1769aa; }
-    .search-box {
-      display: block;
-      width: 100%;
-      max-width: 600px;
-      margin: 15px auto 25px;
-      padding: 13px;
-      border: 1px solid #bbb;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    details {
-      margin-top: 10px;
-      border-top: 1px solid #eee;
-      padding-top: 10px;
-    }
-    details summary {
-      cursor: pointer;
-      color: #087b3a;
-      font-weight: bold;
-    }
-    .service-number {
-      color: #777;
-      font-size: 13px;
-    }
-    .panel {
-      max-width: 850px;
-      margin: 15px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 9px #00000012;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border: 1px solid #bbb;
-      border-radius: 7px;
-      font-size: 16px;
-    }
-    textarea { min-height: 100px; resize: vertical; }
-    .chat-answer {
-      background: #eef8f1;
-      padding: 13px;
-      border-radius: 8px;
-      margin-top: 12px;
-      white-space: pre-wrap;
-      line-height: 1.6;
-    }
-    .entertainment-link {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      border-radius: 7px;
-    }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px 12px;
-      line-height: 1.8;
-    }
-    footer a { color: #09e565; }
-    .notice {
-      font-size: 13px;
-      color: #666;
-      line-height: 1.5;
-    }
-    @media(max-width:600px) {
-      header h1 { font-size: 23px; }
-      nav a { margin: 6px; }
-      section { padding: 20px 12px; }
-    }
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f3f6fa;color:#172536;line-height:1.6}
+a{text-decoration:none}
+header{background:linear-gradient(120deg,#09233f,#075b75);color:white;text-align:center;padding:38px 15px}
+header h1{font-size:clamp(27px,5vw,42px)}
+header p{margin-top:8px}
+nav{background:#06192d;padding:13px;display:flex;justify-content:center;gap:17px;flex-wrap:wrap;position:sticky;top:0;z-index:10}
+nav a{color:white;font-weight:bold;font-size:14px}
+nav a:hover{color:#09e565}
+.container{max-width:1150px;margin:auto;padding:25px 15px}
+.admin-top{max-width:1100px;margin:20px auto;padding:22px;background:#102b46;color:white;border-radius:12px;text-align:center}
+.admin-button,.main-button{display:inline-block;background:#09e565;color:#102b46;padding:11px 23px;border-radius:8px;font-weight:bold;margin-top:12px}
+.section-title{text-align:center;margin-bottom:22px}
+.section-title h2{color:#092b49;font-size:27px}
+.hero{background:white;padding:35px 18px;border-radius:12px;text-align:center}
+.hero p{max-width:700px;margin:12px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;padding:20px;border-radius:12px;border:1px solid #e5ebf1;box-shadow:0 3px 12px #0000000c}
+.card h3{color:#075477;margin-bottom:8px}
+.card p{font-size:14px;color:#536273}
+.card a{display:inline-block;margin-top:13px;color:#087b50;font-weight:bold}
+.search-area{max-width:650px;margin:0 auto 22px}
+input,textarea,select{width:100%;padding:13px;border:1px solid #ccd6e0;border-radius:8px;font-size:15px;margin:7px 0}
+button{background:#087b50;color:white;border:0;border-radius:8px;padding:12px 20px;font-weight:bold;cursor:pointer}
+button:hover{background:#065f3d}
+.details{max-width:800px;margin:25px auto;background:white;border-radius:12px;padding:24px;border:2px solid #09b66a}
+.details h2{color:#075477;margin-bottom:12px}
+.details p{margin:10px 0}
+.ai-box,.map-box,.contact-box{background:white;padding:22px;border-radius:12px;max-width:800px;margin:auto}
+.notice{font-size:13px;color:#946000;margin-top:12px}
+footer{background:#06192d;color:white;text-align:center;padding:25px;margin-top:30px}
+footer a{color:#09e565}
+@media(max-width:600px){nav{gap:11px}nav a{font-size:12px}.container{padding:18px 12px}}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>🎤 BENJAMIN IMYIDAGADURO</h1>
-  <p>Music, Films, Amakuru n'Abahanzi</p>
-  <p><strong>One Platform. Many Solutions.</strong></p>
+<h1>🌍 BENJAMIN DIGITAL</h1>
+<p><strong>One Platform. Many Solutions.</strong></p>
+<p>Serivisi zifasha abaturarwanda kubona ibisubizo ahantu hamwe.</p>
 </header>
 
 <nav>
-  <a href="#home">Ahabanza</a>
-  <a href="#imyidagaduro">Imyidagaduro</a>
-  <a href="#services">Digital Services</a>
-  <a href="#ai">ASK BENJAMIN AI</a>
-  <a href="#map">Rwanda Map</a>
-  <a href="#contact">Twandikire</a>
+<a href="#home">Ahabanza</a>
+<a href="#entertainment">Imyidagaduro</a>
+<a href="#services">Digital Services</a>
+<a href="#ai">ASK BENJAMIN AI</a>
+<a href="#map">Rwanda Map</a>
+<a href="#contact">Twandikire</a>
 </nav>
 
-<section id="home">
-  <div class="intro">
-    <h2>Murakaza neza kuri BENJAMIN</h2>
-    <p>
-      Urubuga ruhuriza hamwe imyidagaduro, amakuru n'ibindi
-      bisubizo bishobora gufasha abaturarwanda mu buzima bwa buri munsi.
-    </p>
-    <p>
-      BENJAMIN DIGITAL igamije gutuma serivisi zitandukanye ziboneka
-      kandi zikorohera abantu kuzikoresha.
-    </p>
-  </div>
+<section class="admin-top">
+<h2>⚙️ BENJAMIN DIGITAL ADMIN</h2>
+<p>Ahantu hihariye ho gucunga urubuga rwa BENJAMIN DIGITAL.</p>
+<a href="admin.html" class="admin-button">Open Admin Dashboard</a>
 </section>
 
-<!-- IMYIDAGADURO -->
-<section id="imyidagaduro">
-  <div class="container">
-    <h2 class="section-title">🎬 BENJAMIN IMYIDAGADURO</h2>
-    <div class="cards">
+<main>
 
-      <div class="card">
-        <h3>🎵 Music</h3>
-        <p>Umuziki, indirimbo n'amakuru y'abahanzi.</p>
-        <a class="btn" href="music.html">Soma byinshi</a>
-      </div>
-
-      <div class="card">
-        <h3>🎥 Films</h3>
-        <p>Amakuru ya films, amashusho n'ibikorwa bya cinema.</p>
-        <a class="btn" href="films.html">Soma byinshi</a>
-      </div>
-
-      <div class="card">
-        <h3>🌟 Abahanzi</h3>
-        <p>Kumenya abahanzi n'ibikorwa byabo.</p>
-        <a class="btn" href="abahanzi.html">Soma byinshi</a>
-      </div>
-
-      <div class="card">
-        <h3>😂 Urwenya</h3>
-        <p>Urwenya n'ibindi bishimisha abantu.</p>
-        <a class="btn" href="#contact">Soma byinshi</a>
-      </div>
-
-      <div class="card">
-        <h3>📰 Amakuru mu Baturange</h3>
-        <p>Amakuru n'ibikorwa bibera mu baturange.</p>
-        <a class="btn" href="#contact">Soma byinshi</a>
-      </div>
-
-      <div class="card">
-        <h3>▶️ Videos</h3>
-        <p>Reba amashusho yashyizwe kuri uru rubuga.</p>
-        <video controls width="100%">
-          <source src="video1.mp4" type="video/mp4">
-          Browser yawe ntishyigikira video.
-        </video>
-        <video controls width="100%">
-          <source src="video2.mp4" type="video/mp4">
-          Browser yawe ntishyigikira video.
-        </video>
-      </div>
-
-    </div>
-  </div>
+<section id="home" class="container">
+<div class="hero">
+<h2>Murakaza neza kuri BENJAMIN DIGITAL</h2>
+<p>Urubuga ruhuriza hamwe serivisi zitandukanye: ubuzima, uburezi, akazi, ubucuruzi, ikoranabuhanga n'ibindi.</p>
+<a href="#services" class="main-button">Reba Services</a>
+</div>
 </section>
 
-<!-- BENJAMIN DIGITAL SERVICES -->
-<section id="services">
-  <div class="container">
-    <h2 class="section-title">🌍 BENJAMIN DIGITAL SERVICES</h2>
-    <p class="intro">
-      Hitamo service ushaka. Kanda kuri <strong>Soma byinshi</strong>
-      kugira ngo ubone ibisobanuro birambuye n'uburyo yagufasha.
-    </p>
-
-    <input
-      class="search-box"
-      id="serviceSearch"
-      type="search"
-      placeholder="Shakisha service..."
-      oninput="searchServices()"
-    >
-
-    <div class="cards" id="serviceCards"></div>
-  </div>
+<section id="entertainment" class="container">
+<div class="section-title">
+<h2>🎬 BENJAMIN IMYIDAGADURO</h2>
+<p>Music, Films n'Abahanzi</p>
+</div>
+<div class="grid">
+<div class="card"><h3>🎵 Music</h3><p>Amakuru n'ibikorwa by'umuziki.</p><a href="music.html">Soma byinshi</a></div>
+<div class="card"><h3>🎥 Films</h3><p>Amakuru ya filime na sinema.</p><a href="#contact">Soma byinshi</a></div>
+<div class="card"><h3>🎤 Abahanzi</h3><p>Menya abahanzi n'ibikorwa byabo.</p><a href="#contact">Soma byinshi</a></div>
+<div class="card"><h3>😂 Urwenya</h3><p>Inkuru n'ibikorwa byo gusetsa.</p><a href="#contact">Soma byinshi</a></div>
+<div class="card"><h3>📰 Amakuru mu Baturange</h3><p>Amakuru n'ibikorwa byo mu baturange.</p><a href="#contact">Soma byinshi</a></div>
+<div class="card"><h3>📺 Videos</h3><p>Amashusho n'ibindi bikorwa.</p><a href="#contact">Soma byinshi</a></div>
+</div>
 </section>
 
-<!-- ASK BENJAMIN AI -->
-<section id="ai">
-  <div class="container">
-    <h2 class="section-title">🤖 ASK BENJAMIN AI</h2>
-    <div class="panel">
-      <p>
-        Baza ikibazo cyawe. Ushobora kwandika mu Kinyarwanda,
-        Icyongereza cyangwa urundi rurimi.
-      </p>
-
-      <form id="aiForm">
-        <textarea id="aiQuestion" required
-          placeholder="Andika ikibazo cyawe hano..."></textarea>
-        <button class="btn blue" type="submit">Ohereza ikibazo</button>
-      </form>
-
-      <div id="aiAnswer" class="chat-answer" hidden></div>
-
-      <p class="notice">
-        ASK BENJAMIN AI ikenera guhuza na AI backend kugira ngo itange
-        ibisubizo by'ubwenge. Ntushyire API key yawe muri iyi HTML.
-      </p>
-    </div>
-  </div>
+<section id="services" class="container">
+<div class="section-title">
+<h2>🌐 DIGITAL SERVICES</h2>
+<p>Hitamo service ushaka kumenya.</p>
+</div>
+<div class="search-area">
+<input id="serviceSearch" type="search" placeholder="Shakisha service..." oninput="searchServices()">
+</div>
+<div id="serviceCards" class="grid"></div>
+<p id="noResults" style="display:none;text-align:center">Nta service ibonetse.</p>
+<div id="serviceDetails"></div>
 </section>
 
-<!-- RWANDA MAP -->
-<section id="map">
-  <div class="container">
-    <h2 class="section-title">🇷🇼 BENJAMIN MAP OF RWANDA</h2>
-    <div class="panel">
-      <p>
-        Hitamo intara n'akarere kugira ngo ushake amakuru y'aho.
-        Uru ni urutonde rw'uturere 30; ikarita nyayo igaragaza imiterere
-        y'uturere izongerwamo nyuma.
-      </p>
-
-      <select id="province" onchange="filterDistricts()">
-        <option value="">Hitamo Intara cyangwa Umujyi</option>
-        <option value="Kigali">Umujyi wa Kigali</option>
-        <option value="Amajyepfo">Intara y'Amajyepfo</option>
-        <option value="Amajyaruguru">Intara y'Amajyaruguru</option>
-        <option value="Iburasirazuba">Intara y'Iburasirazuba</option>
-        <option value="Iburengerazuba">Intara y'Iburengerazuba</option>
-      </select>
-
-      <select id="district">
-        <option value="">Hitamo Akarere</option>
-      </select>
-
-      <button class="btn" onclick="showDistrict()">Reba akarere</button>
-      <div id="districtInfo" class="chat-answer" hidden></div>
-    </div>
-  </div>
+<section id="ai" class="container">
+<div class="section-title">
+<h2>🤖 ASK BENJAMIN AI</h2>
+<p>Baza ikibazo cyawe.</p>
+</div>
+<div class="ai-box">
+<form id="aiForm">
+<textarea id="question" rows="4" placeholder="Andika ikibazo cyawe hano..." required></textarea>
+<button type="submit">Ohereza ikibazo</button>
+</form>
+<p id="aiAnswer" aria-live="polite"></p>
+<p class="notice">ASK BENJAMIN AI izasubiza ibibazo iyo ihujwe na AI backend. Iyi form yonyine ntirimo AI nyayo.</p>
+</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">📞 Twandikire</h2>
-    <div class="panel">
-      <p>WhatsApp: <a href="https://wa.me/250738280217" target="_blank">Twandikire kuri WhatsApp</a></p>
-      <p>Email: <a href="mailto:benjaminnibishaka2@gmail.com">benjaminnibishaka2@gmail.com</a></p>
-    </div>
-  </div>
+<section id="map" class="container">
+<div class="section-title">
+<h2>🇷🇼 RWANDA MAP</h2>
+<p>Hitamo Intara n'Akarere.</p>
+</div>
+<div class="map-box">
+<label>Intara</label>
+<select id="province" onchange="updateDistricts()">
+<option value="">Hitamo Intara</option>
+<option value="Kigali">Umujyi wa Kigali</option>
+<option value="South">Intara y'Amajyepfo</option>
+<option value="North">Intara y'Amajyaruguru</option>
+<option value="East">Intara y'Iburasirazuba</option>
+<option value="West">Intara y'Iburengerazuba</option>
+</select>
+<label>Akarere</label>
+<select id="district"><option value="">Banza uhitemo Intara</option></select>
+<button onclick="showLocation()">Reba Akarere</button>
+<p id="mapResult"></p>
+<p class="notice">Iyi ni directory y'uturere; si ikarita nyayo ya GPS.</p>
+</div>
 </section>
+
+<section id="contact" class="container">
+<div class="section-title"><h2>📩 TWANDIKIRE</h2></div>
+<div class="contact-box">
+<p>WhatsApp: <a href="https://wa.me/250738280217">Ohereza ubutumwa</a></p>
+<p>Email: <a href="mailto:benjaminnibishaka2@gmail.com">benjaminnibishaka2@gmail.com</a></p>
+</div>
+</section>
+
+</main>
 
 <footer>
-  <h3>BENJAMIN IMYIDAGADURO</h3>
-  <p>One Platform. Many Solutions.</p>
-  <p>© 2026 BENJAMIN. All rights reserved.</p>
+<p><strong>BENJAMIN DIGITAL</strong></p>
+<p>One Platform. Many Solutions.</p>
+<p>© <span id="year"></span> BENJAMIN DIGITAL. All rights reserved.</p>
 </footer>
 
 <script>
-/*
-  SERIVISI:
-  Ibisobanuro biri muri array ni iby'ibanze.
-  Serivisi zisaba kwishyura, booking, amakuru mashya cyangwa
-  guhuza n'izindi nzego zizakenera APIs cyangwa ubufatanye.
-*/
-
 const services = [
-  {
-    name: "BENJAMIN MUSIC",
-    desc: "Serivisi ijyanye n'umuziki.",
-    details: "Abakoresha bashobora gushaka amakuru y'indirimbo, abahanzi, albums n'ibikorwa by'umuziki. Hazongerwamo uburyo bwo kureba no kumva ibihangano byemewe n'uburenganzira bwabyo. Uburyo bwo kugura cyangwa kumva indirimbo buzaterwa n'ubufatanye n'abafite ibihangano.",
-    icon: "🎵"
-  },
-  {
-    name: "BENJAMIN MOVIES",
-    desc: "Amakuru ya films na cinema.",
-    details: "Iyi service izajya itanga amakuru ya films, abakinnyi, aho films zirebwa mu buryo bwemewe, trailers n'amakuru mashya ya cinema. Ntabwo izashyiraho films z'abandi nta burenganzira.",
-    icon: "🎬"
-  },
-  {
-    name: "BENJAMIN NEWS",
-    desc: "Amakuru n'ibibera hirya no hino.",
-    details: "Izajya ikusanya kandi itange amakuru y'ingenzi ku baturage. Amakuru azajya agaragazwa hamwe n'aho yaturutse n'igihe yatangarijwe kugira ngo abantu bashobore kuyagenzura.",
-    icon: "📰"
-  },
-  {
-    name: "BENJAMIN SPORTS",
-    desc: "Amakuru y'imikino.",
-    details: "Amakuru y'amakipe, amarushanwa, gahunda y'imikino, ibisubizo n'ibikorwa by'abakinnyi. Amakuru y'ibisubizo n'igihe nyacyo azakenera isoko ry'amakuru rigezweho.",
-    icon: "⚽"
-  },
-  {
-    name: "BENJAMIN EDUCATION",
-    desc: "Kwiga no kubona ubumenyi.",
-    details: "Abanyeshuri bazabona amasomo, inyandiko z'ubufasha, imyitozo, ibizamini by'imyitozo, amasomo y'ikoranabuhanga n'amakuru ajyanye n'amashuri. Ibyigwa bizategurwa hakurikijwe urwego rw'abanyeshuri.",
-    icon: "🎓"
-  },
-  {
-    name: "BENJAMIN JOBS",
-    desc: "Akazi n'amahirwe yo gukora.",
-    details: "Hazajya hagaragara Job Opportunities, ibisabwa ku mirimo, aho gutanga ubusabe n'amakuru y'amahirwe mashya. Abakoresha bazajya basuzuma neza ko itangazo ry'akazi ari iry'ukuri mbere yo gusaba.",
-    icon: "💼"
-  },
-  {
-    name: "BENJAMIN TRAVEL",
-    desc: "Amakuru y'ingendo n'ubukerarugendo.",
-    details: "Ifasha gushaka amakuru y'aho umuntu yasura, amahoteli, ibikorwa byo kwidagadura, uburyo bwo kugenda n'ibisabwa mu rugendo. Booking nyayo izakenera ubufatanye n'abatanga serivisi.",
-    icon: "✈️"
-  },
-  {
-    name: "BENJAMIN REAL ESTATE",
-    desc: "Amazu n'imitungo itimukanwa.",
-    details: "Abantu bazashobora kubona amatangazo y'amazu akodeshwa, agurishwa, ubutaka n'ibindi. Amatangazo azajya agenzurwa uko bishoboka kandi abakoresha basabwe kugenzura ibyangombwa mbere yo kwishyura.",
-    icon: "🏠"
-  },
-  {
-    name: "BENJAMIN PAY",
-    desc: "Amakuru ajyanye no kwishyura.",
-    details: "Izajya itanga ubuyobozi ku buryo bwo kwishyura serivisi n'ibindi bikorwa hakoreshejwe uburyo bwemewe. Kwakira cyangwa kohereza amafaranga nyirizina bizakenera umufatanyabikorwa wemewe n'umutekano ukwiye.",
-    icon: "💳"
-  },
-  {
-    name: "BENJAMIN TRANSPORT",
-    desc: "Amakuru y'ingendo n'ubwikorezi.",
-    details: "Abakoresha bazashobora gushaka aho imodoka ziva n'aho zijya, amakuru y'ibiciro, amasaha y'ingendo n'abatanga serivisi z'ubwikorezi. Kugura amatike, guhindura booking no gukurikirana imodoka bizakenera guhuza na kompanyi z'ubwikorezi.",
-    icon: "🚌"
-  },
-  {
-    name: "BENJAMIN BANKING",
-    desc: "Ubumenyi n'amakuru ajyanye na banki.",
-    details: "Izajya isobanura serivisi za banki, uburyo bwo kuzigama, gufungura konti, gukoresha mobile banking n'uko umuntu yamenya amakuru y'ibiciro. Ntabwo izajya ibika amakuru y'ibanga ya konti za banki.",
-    icon: "🏦"
-  },
-  {
-    name: "BENJAMIN SKILLS",
-    desc: "Kwiga ubumenyi ngiro.",
-    details: "Abakoresha bazabona amasomo y'ubumenyi ngiro nko gukoresha mudasobwa, gutegura imishinga, kuvugana neza n'abandi, gukora ibikoresho no kwihangira imirimo.",
-    icon: "🛠️"
-  },
-  {
-    name: "BENJAMIN FAMILY",
-    desc: "Amakuru afasha imiryango.",
-    details: "Izajya itanga inyigisho n'amakuru ku mibereho y'umuryango, inshingano z'ababyeyi, uburere bw'abana n'aho gushakira ubufasha bukwiye.",
-    icon: "👨‍👩‍👧"
-  },
-  {
-    name: "BENJAMIN AUTO",
-    desc: "Ibinyabiziga n'ubufasha ku modoka.",
-    details: "Amakuru ku modoka, kubungabunga ibinyabiziga, serivisi zo gusana, ibikoresho by'imodoka n'amakuru y'ibigo bitanga serivisi. Ibyo kugura cyangwa gusana bizakorwa n'abatanga serivisi babigenewe.",
-    icon: "🚗"
-  },
-  {
-    name: "BENJAMIN LIBRARY",
-    desc: "Isomero ry'ibitabo n'inyandiko.",
-    details: "Hazajya haboneka amakuru y'ibitabo, inyandiko z'ubumenyi, ibikoresho byo kwiga n'amasoko y'ibitabo byemewe. Ibitabo birinzwe n'uburenganzira ntibizashyirwa hanze nta ruhushya.",
-    icon: "📚"
-  },
-  {
-    name: "BENJAMIN WATER",
-    desc: "Amakuru ajyanye n'amazi.",
-    details: "Izajya itanga ubuyobozi ku kubona amazi meza, kubungabunga amazi, gutanga raporo ku bibazo by'amazi no gushaka aho umuntu yahamagara. Gutanga raporo ku kigo bireba bizakenera uburyo bwo guhuza na cyo.",
-    icon: "💧"
-  },
-  {
-    name: "BENJAMIN YOUTH",
-    desc: "Amakuru n'amahirwe ku rubyiruko.",
-    details: "Serivisi igenewe gufasha urubyiruko kubona amahugurwa, amakuru y'uburezi, imishinga, amahirwe yo kwihangira imirimo n'ibikorwa by'iterambere.",
-    icon: "🧑‍🤝‍🧑"
-  },
-  {
-    name: "BENJAMIN RECYCLING",
-    desc: "Gutunganya no kongera gukoresha imyanda.",
-    details: "Izajya yigisha gutandukanya imyanda, kongera gukoresha ibikoresho no gushaka amakuru y'ahantu hakusanyirizwa imyanda ishobora kongera gukoreshwa.",
-    icon: "♻️"
-  },
-  {
-    name: "BENJAMIN CONSTRUCTION",
-    desc: "Ubwubatsi n'amakuru yabwo.",
-    details: "Amakuru ku bwubatsi, ibikoresho, abanyabukorikori, igenamigambi ry'inyubako n'ibindi. Ubufasha mu by'ubwubatsi bwihariye bugomba gutangwa n'ababifitiye ubumenyi n'impushya.",
-    icon: "🏗️"
-  },
-  {
-    name: "BENJAMIN DELIVERY",
-    desc: "Amakuru yo kugeza ibintu ku bantu.",
-    details: "Izajya ifasha gushaka amakuru y'abatanga serivisi zo kugeza ibintu ku bantu, aho bakorera n'ibisabwa. Gukurikirana colis no gutumiza delivery bizakenera ubufatanye n'ibigo bitanga izo serivisi.",
-    icon: "📦"
-  },
-  {
-    name: "BENJAMIN COMMUNITY HELP",
-    desc: "Ubufasha n'ubufatanye mu baturage.",
-    details: "Abaturage bazashobora gusangira amakuru y'ibibazo by'aho batuye, amahirwe yo gufashanya, ibikorwa by'iterambere n'uburyo bwo kubona ubufasha. Amakuru ashyirwa hanze agomba kubahiriza ubuzima bwite n'umutekano.",
-    icon: "🤝"
-  },
-  {
-    name: "BENJAMIN RRA SERVICES",
-    desc: "Ubuyobozi ku serivisi za RRA.",
-    details: "Izajya itanga ibisobanuro ku TIN, EBM, imisoro, VAT, Tax Clearance, imenyekanisha ry'imisoro, gasutamo n'aho RRA itangira ubufasha. Ni urubuga rutanga ubuyobozi; ntiruvuga ko rufitanye ubufatanye na RRA.",
-    icon: "🧾"
-  },
-  {
-    name: "BENJAMIN IREMBO SERVICES",
-    desc: "Ubuyobozi ku serivisi ziboneka kuri Irembo.",
-    details: "Ifasha abantu kumenya serivisi ziboneka kuri Irembo, ibisabwa, intambwe zo gusaba serivisi n'aho binjirira ku rubuga rwemewe. Ntabwo bivuze ko BENJAMIN ifitanye ubufatanye na Irembo.",
-    icon: "🏛️"
-  },
-  {
-    name: "BENJAMIN IMIKINO",
-    desc: "Imikino n'amarushanwa.",
-    details: "Amakuru y'imikino, gahunda z'amarushanwa, ibisubizo, amakipe, abakinnyi n'imikino isanzwe. Amakuru y'igihe nyacyo azakenera isoko ryizewe.",
-    icon: "🏆"
-  },
-  {
-    name: "BENJAMIN HEALTH",
-    desc: "Ubuzima n'ubumenyi ku buzima.",
-    details: "Amakuru rusange ku buzima, kwirinda indwara, isuku, ibigo nderabuzima n'aho gushakira ubufasha. Ntabwo isimbura umuganga cyangwa inama z'abaganga.",
-    icon: "🏥"
-  },
-  {
-    name: "BENJAMIN AMAKURU MU BATURANGE",
-    desc: "Amakuru ava mu baturage.",
-    details: "Abaturage bazajya basangiza abandi amakuru y'ibikorwa, iterambere n'ibibazo bibera aho batuye. Amakuru azajya asuzumwa mbere yo gutangazwa kugira ngo hirindwe ibihuha.",
-    icon: "📢"
-  },
-  {
-    name: "BENJAMIN AGRICULTURE",
-    desc: "Ubuhinzi n'ubworozi.",
-    details: "Amakuru ku buhinzi, ubworozi, ibihe by'ihinga, ubuhunikiro, amasoko y'umusaruro n'uburyo bwo kunoza umusaruro. Inama zihariye zizajya zishingira ku makuru y'inzobere.",
-    icon: "🌱"
-  },
-  {
-    name: "BENJAMIN MARKET",
-    desc: "Kwamamaza no gushaka ibicuruzwa.",
-    details: "Abakoresha bazashobora kubona amatangazo y'ibicuruzwa, ibiciro n'abacuruzi. Kugura no kwishyura bizakorwa binyuze ku buryo bwizewe kandi buzaba bwashyizweho.",
-    icon: "🛍️"
-  },
-  {
-    name: "BENJAMIN TOURISM",
-    desc: "Ubukerarugendo mu Rwanda.",
-    details: "Amakuru y'ahantu nyaburanga, pariki, ingoro ndangamurage, amahoteli n'ibikorwa by'ubukerarugendo. Booking nyayo izakenera ubufatanye n'abatanga serivisi.",
-    icon: "🦍"
-  },
-  {
-    name: "BENJAMIN UTILITIES",
-    desc: "Serivisi z'ibanze z'abaturage.",
-    details: "Amakuru ku mazi, umuriro w'amashanyarazi, ibibazo bya serivisi rusange, uburyo bwo kumenyekanisha ikibazo n'aho umuntu yakura ubufasha.",
-    icon: "🔌"
-  },
-  {
-    name: "BENJAMIN BUSINESS",
-    desc: "Ubucuruzi n'iterambere ryabwo.",
-    details: "Ubufasha ku gutangiza no guteza imbere ubucuruzi, kwamamaza, kumenya abakiriya, gutegura business plan no gushaka amakuru y'amahirwe y'ubucuruzi.",
-    icon: "📈"
-  },
-  {
-    name: "BENJAMIN WEATHER",
-    desc: "Amakuru y'ikirere.",
-    details: "Amakuru y'iteganyagihe, imvura, ubushyuhe n'ibindi bijyanye n'ikirere. Iyi service izakenera guhuza n'isoko ry'amakuru y'iteganyagihe rigezweho.",
-    icon: "🌦️"
-  },
-  {
-    name: "BENJAMIN ENVIRONMENT",
-    desc: "Kurengera ibidukikije.",
-    details: "Inyigisho ku isuku, gutera ibiti, kurwanya imyanda, kubungabunga amazi n'ubutaka no kumenya ibikorwa byo kurengera ibidukikije.",
-    icon: "🌳"
-  },
-  {
-    name: "BENJAMIN TECH",
-    desc: "Ikoranabuhanga n'ubufasha bwa mudasobwa.",
-    details: "Inyigisho ku gukoresha telefone na mudasobwa, porogaramu, internet, gusana ibikoresho no gukoresha ikoranabuhanga mu buzima bwa buri munsi.",
-    icon: "💻"
-  },
-  {
-    name: "BENJAMIN COMMUNITY",
-    desc: "Guhuza abaturage n'ibikorwa byabo.",
-    details: "Gusangiza amakuru y'ibikorwa byo mu baturage, amahugurwa, inama, ibikorwa by'ubufatanye n'amakuru y'iterambere ry'aho batuye.",
-    icon: "🏘️"
-  },
-  {
-    name: "BENJAMIN LEGAL HELP",
-    desc: "Ubumenyi rusange ku mategeko.",
-    details: "Itanga ibisobanuro rusange ku mategeko, uburenganzira n'inshingano z'abaturage, n'aho bashakira ubufasha bw'abanyamategeko. Ntabwo isimbura umunyamategeko.",
-    icon: "⚖️"
-  },
-  {
-    name: "BENJAMIN INSURANCE",
-    desc: "Amakuru ku bwishingizi.",
-    details: "Ibisobanuro ku bwishingizi butandukanye, uko bukora, ibyangombwa bisabwa n'aho umuntu yabaza ibigo by'ubwishingizi. Ntabwo yakira ubwishyu cyangwa ngo itange ubwishingizi ubwayo.",
-    icon: "🛡️"
-  },
-  {
-    name: "BENJAMIN EVENTS",
-    desc: "Ibikorwa n'ibirori.",
-    details: "Amakuru y'ibitaramo, inama, amahugurwa, imurikagurisha n'ibindi bikorwa. Kugura amatike cyangwa kwiyandikisha bizakenera uburyo bwihariye.",
-    icon: "🎟️"
-  },
-  {
-    name: "BENJAMIN HOME SERVICES",
-    desc: "Serivisi zo mu rugo.",
-    details: "Gushaka amakuru y'abatanga serivisi zo mu rugo nko gusana, isuku n'ibindi bikorwa. Abakoresha bagomba kugenzura neza utanga serivisi mbere yo kumwishyura.",
-    icon: "🧹"
-  },
-  {
-    name: "BENJAMIN LANGUAGE",
-    desc: "Kwiga indimi.",
-    details: "Amasomo n'imyitozo yo kwiga indimi zitandukanye, amagambo, ibiganiro, gusoma no kwandika. Hazongerwamo indimi nyinshi uko ibikoresho bizagenda biboneka.",
-    icon: "🌐"
-  },
-  {
-    name: "BENJAMIN EMERGENCY",
-    desc: "Amakuru y'ubutabazi bwihuse.",
-    details: "Ubuyobozi bwo kumenya inzego z'ubutabazi n'imibare y'ubufasha yemewe. Mu gihe cy'akaga, hamagara inzego z'ubutabazi aho gutegereza igisubizo kuri uru rubuga.",
-    icon: "🚨"
-  },
-  {
-    name: "BENJAMIN FOOD",
-    desc: "Ibiribwa n'amakuru y'imirire.",
-    details: "Amakuru y'ibiribwa, ahacururizwa ibiribwa, isuku yabyo n'inyigisho z'imirire iboneye. Ntabwo isimbura inama z'inzobere mu mirire.",
-    icon: "🍎"
-  },
-  {
-    name: "BENJAMIN LOST & FOUND",
-    desc: "Ibintu byabuze n'ibyabonetse.",
-    details: "Abantu bazashobora gutangaza ibintu byabuze cyangwa byabonetse batashyize ahagaragara amakuru yabo y'ibanga. Uburyo bwo kwemeza nyir'ikintu bugomba kubaho mbere yo kugisubiza.",
-    icon: "🔎"
-  },
-  {
-    name: "BENJAMIN CAREER",
-    desc: "Gufasha abantu gutegura umwuga.",
-    details: "Inyigisho ku guhitamo umwuga, gutegura CV, kwitegura ikiganiro cy'akazi no kumenya ubumenyi bukenewe mu kazi.",
-    icon: "🧭"
-  },
-  {
-    name: "BENJAMIN DOCUMENTS & TRANSLATION",
-    desc: "Inyandiko no guhindura indimi.",
-    details: "Ubuyobozi ku gutegura inyandiko, kuzikosora no guhindura indimi. Inyandiko zemewe n'amategeko zizakenera umusemuzi cyangwa urwego rubifitiye ububasha.",
-    icon: "📄"
-  },
-  {
-    name: "BENJAMIN REPAIR",
-    desc: "Gushaka ubufasha bwo gusana.",
-    details: "Gushaka amakuru y'abasana telefone, mudasobwa, ibikoresho byo mu rugo n'ibindi. Igiciro n'ubwiza bw'akazi bigomba kwemezwa n'utanga serivisi.",
-    icon: "🔧"
-  },
-  {
-    name: "BENJAMIN PUBLIC ALERTS",
-    desc: "Amatangazo n'imbuzi rusange.",
-    details: "Gutanga amakuru y'imbuzi zemewe, amatangazo y'ingenzi n'ibikorwa bireba abaturage. Amakuru yihutirwa agomba kuva ku nzego zizewe.",
-    icon: "📣"
-  },
-  {
-    name: "BENJAMIN CHILD & FAMILY CARE",
-    desc: "Ubufasha ku bana n'imiryango.",
-    details: "Amakuru ku burenganzira bw'abana, uburere, imibereho myiza n'aho imiryango ishakira ubufasha. Amakuru y'abana agomba kurindwa cyane.",
-    icon: "👪"
-  },
-  {
-    name: "BENJAMIN ACCESSIBILITY",
-    desc: "Korohereza abantu bafite ubumuga.",
-    details: "Amakuru n'ubuyobozi ku serivisi, inyubako n'ibikoresho byorohereza abantu bafite ubumuga kubona amakuru no kwitabira ibikorwa by'abaturage.",
-    icon: "♿"
-  },
-  {
-    name: "BENJAMIN DIGITAL SKILLS",
-    desc: "Ubumenyi bwo gukoresha ikoranabuhanga.",
-    details: "Amasomo yo gukoresha internet, email, mudasobwa, telefoni, porogaramu n'uburyo bwo kwirinda ibibazo byo kuri internet.",
-    icon: "🖥️"
-  },
-  {
-    name: "BENJAMIN VOLUNTEER & DONATIONS",
-    desc: "Ubukorerabushake n'ubufasha.",
-    details: "Guhuza abantu bashaka gukora ibikorwa by'ubukorerabushake n'imiryango ikeneye ubufasha. Impano zigomba kunyuzwa mu nzira zizewe kandi zisobanutse.",
-    icon: "❤️"
-  },
-  {
-    name: "BENJAMIN LOCAL SERVICES",
-    desc: "Serivisi ziboneka hafi y'aho utuye.",
-    details: "Gushaka amakuru y'abatanga serivisi zo mu gace runaka, aho bakorera, amasaha n'uburyo bwo kubageraho. Amakuru y'aho bakorera agomba kugenzurwa.",
-    icon: "📍"
-  },
-  {
-    name: "BENJAMIN MENTAL WELLNESS",
-    desc: "Amakuru ku mibereho myiza yo mu mutwe.",
-    details: "Inyigisho rusange ku guhangana n'umunaniro, kwita ku mibereho myiza no kumenya aho umuntu ashakira ubufasha bw'inzobere. Ntabwo isimbura inzobere mu buzima bwo mu mutwe.",
-    icon: "🌿"
-  },
-  {
-    name: "BENJAMIN ENERGY",
-    desc: "Amakuru ajyanye n'ingufu.",
-    details: "Inyigisho ku mashanyarazi, gukoresha ingufu neza, ingufu zisubira n'uburyo bwo kumenya amakuru y'abatanga serivisi z'ingufu.",
-    icon: "⚡"
-  },
-  {
-    name: "BENJAMIN FINANCIAL EDUCATION",
-    desc: "Kwigisha imicungire y'amafaranga.",
-    details: "Amasomo ku kuzigama, gutegura ingengo y'imari, kumenya amafaranga yinjira n'asohoka no kwirinda uburiganya mu by'amafaranga.",
-    icon: "📊"
-  },
-  {
-    name: "BENJAMIN NUTRITION",
-    desc: "Ubumenyi ku mirire.",
-    details: "Inyigisho rusange ku mirire iboneye, amatsinda y'ibiribwa, isuku y'ibiribwa n'akamaro ko kurya indyo itandukanye. Inama zihariye z'ubuzima zigomba gutangwa n'inzobere.",
-    icon: "🥗"
-  },
-  {
-    name: "BENJAMIN FARMER SUPPORT",
-    desc: "Ubufasha ku bahinzi.",
-    details: "Amakuru y'ubuhinzi, amasoko y'umusaruro, amahugurwa, uburyo bwo kubika umusaruro n'aho abahinzi bashakira ubufasha.",
-    icon: "🚜"
-  },
-  {
-    name: "BENJAMIN SOCIAL SUPPORT",
-    desc: "Amakuru y'ubufasha rusange.",
-    details: "Ubuyobozi ku gahunda z'ubufasha, serivisi z'imibereho myiza n'aho abaturage bashobora kubaza ibibazo byabo. Ibyemezo byo guhabwa ubufasha bifatwa n'inzego zibifitiye ububasha.",
-    icon: "🤲"
-  },
-  {
-    name: "BENJAMIN CIVIC ENGAGEMENT",
-    desc: "Kumenya uruhare rw'umuturage.",
-    details: "Amakuru ku nshingano z'umuturage, ibikorwa by'iterambere, inama z'abaturage n'uburyo bwo kugeza ibitekerezo ku nzego zibishinzwe.",
-    icon: "🏛️"
-  },
-  {
-    name: "BENJAMIN EARLY CHILDHOOD",
-    desc: "Amakuru ku mikurire y'abana bato.",
-    details: "Inyigisho rusange ku mikurire, gukina, kwiga no kwita ku bana bato. Inama z'ubuzima zigomba kwemezwa n'abaganga cyangwa inzobere.",
-    icon: "🧸"
-  },
-  {
-    name: "BENJAMIN DISASTER PREPAREDNESS",
-    desc: "Kwitegura ibiza.",
-    details: "Amakuru y'uburyo bwo kwitegura ibiza, kumenya amatangazo y'inzego zibishinzwe no gukurikiza amabwiriza y'umutekano.",
-    icon: "⛑️"
-  },
-  {
-    name: "BENJAMIN LANGUAGE LEARNING",
-    desc: "Amasomo yo kwiga indimi.",
-    details: "Imyitozo y'amagambo, gusoma, kwandika no kuganira mu ndimi zitandukanye. Abakoresha bazajya bahitamo ururimi n'urwego rw'amasomo.",
-    icon: "🗣️"
-  },
-  {
-    name: "BENJAMIN LEGAL HELP",
-    desc: "Ubufasha mu kumenya aho wabaza ibibazo by'amategeko.",
-    details: "Ibisobanuro rusange ku mategeko n'uburenganzira, hamwe n'aho umuntu ashobora gushakira umunyamategeko cyangwa ubufasha bwemewe.",
-    icon: "⚖️"
-  },
-  {
-    name: "BENJAMIN CONSUMER PROTECTION",
-    desc: "Kurengera umuguzi.",
-    details: "Inyigisho ku burenganzira bw'umuguzi, kugenzura ibicuruzwa, kubika inyemezabuguzi no kumenya inzego zishinzwe kwakira ibirego by'abaguzi.",
-    icon: "🛒"
-  },
-  {
-    name: "BENJAMIN SCHOLARSHIPS",
-    desc: "Amakuru ya buruse n'amahirwe yo kwiga.",
-    details: "Gushyira ahagaragara amakuru ya buruse, ibisabwa, igihe cyo gusaba, inyandiko zikenewe n'aho ubusabe butangirwa. Amakuru agomba kugenzurwa ku isoko ryayo.",
-    icon: "🎓"
-  },
-  {
-    name: "BENJAMIN CYBER SAFETY",
-    desc: "Umutekano wo kuri internet.",
-    details: "Inyigisho zo kurinda konti, kumenya ubutumwa bw'uburiganya, gukoresha ijambo ry'ibanga rikomeye, kurinda amakuru bwite no kumenya aho gutanga raporo.",
-    icon: "🔐"
-  },
-  {
-    name: "BENJAMIN STARTUP SUPPORT",
-    desc: "Ubufasha ku batangiza imishinga.",
-    details: "Ubuyobozi ku gutangira umushinga, gukora business plan, kumenya abakiriya, gushaka amahugurwa n'amakuru y'amahirwe yo guteza imbere igitekerezo.",
-    icon: "🚀"
-  },
-  {
-    name: "BENJAMIN INSURANCE & PENSION",
-    desc: "Ubwishingizi na pansiyo.",
-    details: "Ibisobanuro rusange ku bwishingizi, pansiyo, uburyo bwo kumenya ibisabwa n'aho kubaza ibigo cyangwa inzego zibishinzwe. Ntabwo iyi service ifata ibyemezo by'ubwishyu cyangwa ubwishingizi.",
-    icon: "🛡️"
-  }
+["Community Help","🤝","Ubufasha n'ibitekerezo bifasha abaturage."],
+["Ubuzima","🏥","Amakuru n'ubumenyi ku buzima."],
+["Kwiga","📚","Ubufasha n'amakuru ajyanye n'uburezi."],
+["RRA","🏛️","Amakuru ku misoro, TIN, imenyekanisha n'izindi serivisi za RRA."],
+["Irembo","🖥️","Ubuyobozi ku buryo bwo kubona serivisi zitangirwa kuri Irembo."],
+["Imikino","⚽","Amakuru y'imikino, amarushanwa n'ibisubizo."],
+["BENJAMIN JOBS","💼","Amakuru y'akazi n'amahirwe yo kubona akazi."],
+["BENJAMIN AMAKURU MU BATURANGE","📰","Amakuru n'ibikorwa byo mu baturange."],
+["BENJAMIN LEGAL HELP","⚖️","Ubumenyi rusange ku mategeko n'aho wabaza ubufasha."],
+["BENJAMIN CONSUMER PROTECTION","🛡️","Kumenya uburenganzira bw'abaguzi n'uko baburengera."],
+["BENJAMIN SCHOLARSHIPS","🎓","Amakuru ku mahirwe ya buruse n'uburyo bwo kuyasaba."],
+["BENJAMIN CYBER SAFETY","🔐","Ubumenyi bwo kwirinda uburiganya n'ibindi byago byo kuri internet."],
+["BENJAMIN STARTUP SUPPORT","🚀","Amakuru n'ibitekerezo bifasha abatangiza imishinga."],
+["BENJAMIN INSURANCE & PENSION","📋","Amakuru rusange ku bwishingizi na pansiyo."],
+["BENJAMIN MENTAL WELLNESS","💚","Ubumenyi rusange ku mibereho myiza yo mu mutwe."],
+["BENJAMIN ENERGY","⚡","Amakuru ku ngufu n'imikoreshereze yazo."],
+["BENJAMIN FINANCIAL EDUCATION","💰","Kwiga gucunga amafaranga no gutegura ingengo y'imari."],
+["BENJAMIN NUTRITION","🥗","Ubumenyi ku mirire iboneye."],
+["BENJAMIN FARMER SUPPORT","🌱","Amakuru n'ubufasha ku bahinzi n'aborozi."],
+["BENJAMIN SOCIAL SUPPORT","🤲","Amakuru ku bufasha n'imibereho y'abaturage."],
+["BENJAMIN CIVIC ENGAGEMENT","🗳️","Ubumenyi ku ruhare rw'abaturage mu iterambere."],
+["BENJAMIN EARLY CHILDHOOD","🧸","Amakuru ku mikurire n'uburere bw'abana bato."],
+["BENJAMIN DISASTER PREPAREDNESS","⛑️","Ubumenyi ku kwitegura ibiza no kumenya amakuru y'ubutabazi."],
+["BENJAMIN LANGUAGE LEARNING","🌍","Kwiga indimi zitandukanye."],
+["BENJAMIN HEALTH","❤️","Amakuru rusange ajyanye n'ubuzima."],
+["BENJAMIN MARKET","🛍️","Amakuru y'amasoko n'ubucuruzi."],
+["BENJAMIN TRANSPORT","🚌","Amakuru ku ngendo no gutwara abantu."],
+["BENJAMIN AGRICULTURE","🌾","Ubumenyi ku buhinzi n'ubworozi."],
+["BENJAMIN TECHNOLOGY","💻","Amakuru n'ubumenyi ku ikoranabuhanga."],
+["BENJAMIN BUSINESS","🏢","Ubufasha ku bucuruzi no gutangiza imishinga."],
+["BENJAMIN ENVIRONMENT","🌳","Kubungabunga ibidukikije."],
+["BENJAMIN TOURISM","🧭","Amakuru ku bukerarugendo mu Rwanda."],
+["BENJAMIN HOUSING","🏠","Amakuru ajyanye n'imiturire."],
+["BENJAMIN WATER","💧","Amakuru ku mazi n'isuku."],
+["BENJAMIN FAMILY","👨‍👩‍👧","Ubumenyi ku mibereho y'umuryango."],
+["BENJAMIN YOUTH","🧑‍🎓","Amakuru n'amahirwe agenewe urubyiruko."],
+["BENJAMIN WOMEN","👩","Amakuru n'amahirwe y'abagore."],
+["BENJAMIN DISABILITY SUPPORT","♿","Amakuru ku bufasha bw'abafite ubumuga."],
+["BENJAMIN CULTURE","🎭","Amakuru ku muco nyarwanda."],
+["BENJAMIN GOVERNMENT SERVICES","🏛️","Ubuyobozi ku makuru ya serivisi za Leta."],
+["BENJAMIN DOCUMENTS","📄","Ubufasha ku nyandiko n'ibyangombwa."],
+["BENJAMIN DIGITAL SKILLS","🖱️","Kwiga ubumenyi bw'ikoranabuhanga."],
+["BENJAMIN INTERNET HELP","🌐","Ubufasha ku ikoreshwa rya internet."],
+["BENJAMIN JOB TRAINING","🧰","Amakuru ku mahugurwa ajyanye n'akazi."],
+["BENJAMIN VOLUNTEERING","🙌","Amakuru ku mahirwe yo kwitangira abandi."],
+["BENJAMIN INNOVATION","💡","Ibitekerezo bishya n'udushya."],
+["BENJAMIN SCIENCE","🔬","Ubumenyi n'amakuru ya siyansi."],
+["BENJAMIN EDUCATION SUPPORT","✏️","Ubufasha mu myigire."],
+["BENJAMIN LIBRARY","📖","Amakuru n'ibikoresho byo gusoma."],
+["BENJAMIN EVENTS","📅","Amakuru y'ibirori n'ibikorwa."],
+["BENJAMIN COMMUNITY NEWS","📢","Amakuru y'abaturage."],
+["BENJAMIN EMERGENCY INFORMATION","🚨","Amakuru y'ubutabazi n'aho wabaza."],
+["BENJAMIN CHILD PROTECTION","🧒","Ubumenyi ku burenganzira no kurengera abana."],
+["BENJAMIN PUBLIC HEALTH","🩺","Ubumenyi ku buzima rusange."],
+["BENJAMIN CLEAN RWANDA","♻️","Isuku no kubungabunga ibidukikije."],
+["BENJAMIN E-COMMERCE","🛒","Amakuru ku bucuruzi bwo kuri internet."],
+["BENJAMIN CREATIVE HUB","🎨","Ubufasha ku bahanga n'abanyabugeni."],
+["BENJAMIN CAREER GUIDANCE","🧭","Ubufasha mu guhitamo umwuga."],
+["BENJAMIN EXAM SUPPORT","📝","Ubufasha mu myigire no kwitegura amasomo."],
+["BENJAMIN LOCAL SERVICES","📍","Amakuru kuri serivisi zo hafi y'abaturage."],
+["BENJAMIN RIGHTS AWARENESS","⚖️","Kumenya uburenganzira n'inshingano."],
+["BENJAMIN FINANCIAL SERVICES GUIDE","🏦","Amakuru rusange kuri serivisi z'imari."],
+["BENJAMIN INSURANCE GUIDE","🛡️","Ubumenyi rusange ku bwishingizi."],
+["BENJAMIN PENSION GUIDE","📑","Amakuru rusange kuri pansiyo."],
+["BENJAMIN LANGUAGE & TRANSLATION","🗣️","Ubufasha mu ndimi no guhindura inyandiko."]
 ];
 
-// Kurema amakarita ya service
-const serviceCards = document.getElementById("serviceCards");
-
-function displayServices(list) {
-  serviceCards.innerHTML = "";
-
-  if (list.length === 0) {
-    serviceCards.innerHTML = "<p>Nta service ibonetse. Gerageza irindi zina.</p>";
-    return;
-  }
-
-  list.forEach((service, index) => {
-    const card = document.createElement("div");
-    card.className = "card";
-
-    const heading = document.createElement("h3");
-    heading.textContent = service.icon + " " + service.name;
-
-    const description = document.createElement("p");
-    description.textContent = service.desc;
-
-    const number = document.createElement("p");
-    number.className = "service-number";
-    number.textContent = "Service";
-
-    const details = document.createElement("details");
-    const summary = document.createElement("summary");
-    summary.textContent = "Soma byinshi";
-
-    const fullText = document.createElement("p");
-    fullText.textContent = service.details;
-
-    const startButton = document.createElement("a");
-    startButton.className = "btn secondary";
-    startButton.href = "#ai";
-    startButton.textContent = "Tangira gukoresha";
-
-    details.appendChild(summary);
-    details.appendChild(fullText);
-
-    card.appendChild(number);
-    card.appendChild(heading);
-    card.appendChild(description);
-    card.appendChild(details);
-    card.appendChild(startButton);
-
-    serviceCards.appendChild(card);
-  });
+function renderServices(list){
+ const area=document.getElementById("serviceCards");
+ area.innerHTML="";
+ list.forEach(service=>{
+  const card=document.createElement("article");
+  card.className="card";
+  const title=document.createElement("h3");
+  title.textContent=service[1]+" "+service[0];
+  const desc=document.createElement("p");
+  desc.textContent=service[2];
+  const link=document.createElement("a");
+  link.href="#serviceDetails";
+  link.textContent="Soma byinshi";
+  link.addEventListener("click",()=>showServiceDetails(service));
+  card.append(title,desc,link);
+  area.appendChild(card);
+ });
+ document.getElementById("noResults").style.display=list.length?"none":"block";
 }
 
-function searchServices() {
-  const search = document.getElementById("serviceSearch").value.toLowerCase();
-
-  const filtered = services.filter(service =>
-    service.name.toLowerCase().includes(search) ||
-    service.desc.toLowerCase().includes(search) ||
-    service.details.toLowerCase().includes(search)
-  );
-
-  displayServices(filtered);
+function showServiceDetails(service){
+ const area=document.getElementById("serviceDetails");
+ area.innerHTML="";
+ const box=document.createElement("div");
+ box.className="details";
+ const title=document.createElement("h2");
+ title.textContent=service[1]+" "+service[0];
+ const desc=document.createElement("p");
+ desc.textContent=service[2];
+ const explanation=document.createElement("p");
+ explanation.textContent="Iyi service igamije gufasha abaturarwanda kubona amakuru, ubumenyi n'ubuyobozi bijyanye na "+service[0]+". Ishobora kugufasha kumenya serivisi ziboneka, aho wazisabira n'ibyo ugomba gutegura. Menya ko amakuru yihariye ashobora guhinduka; ujye unagenzura ku rwego rubifitiye ububasha.";
+ const close=document.createElement("button");
+ close.textContent="Funga";
+ close.addEventListener("click",()=>{area.innerHTML="";});
+ box.append(title,desc,explanation,close);
+ area.appendChild(box);
+ box.scrollIntoView({behavior:"smooth",block:"center"});
 }
 
-displayServices(services);
+function searchServices(){
+ const q=document.getElementById("serviceSearch").value.toLowerCase().trim();
+ renderServices(services.filter(s=>s.join(" ").toLowerCase().includes(q)));
+}
+renderServices(services);
+document.getElementById("year").textContent=new Date().getFullYear();
 
-// RWANDA DISTRICTS
-const districts = {
-  Kigali: ["Gasabo", "Kicukiro", "Nyarugenge"],
-  Amajyepfo: [
-    "Gisagara", "Huye", "Kamonyi", "Muhanga", "Nyamagabe",
-    "Nyanza", "Nyaruguru", "Ruhango"
-  ],
-  Amajyaruguru: [
-    "Burera", "Gakenke", "Gicumbi", "Musanze", "Rulindo"
-  ],
-  Iburasirazuba: [
-    "Bugesera", "Gatsibo", "Kayonza", "Kirehe",
-    "Ngoma", "Nyagatare", "Rwamagana"
-  ],
-  Iburengerazuba: [
-    "Karongi", "Ngororero", "Nyabihu", "Nyamasheke",
-    "Rubavu", "Rusizi", "Rutsiro"
-  ]
+document.getElementById("aiForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const q=document.getElementById("question").value.trim();
+ if(!q)return;
+ document.getElementById("aiAnswer").textContent="Murakoze kubaza. ASK BENJAMIN AI ntirahuza na AI backend. Iki kibazo kizajya gisubizwa iyo AI nyayo imaze guhuzwa n'urubuga.";
+});
+
+const districts={
+ Kigali:["Gasabo","Kicukiro","Nyarugenge"],
+ South:["Gisagara","Huye","Kamonyi","Muhanga","Nyamagabe","Nyanza","Nyaruguru","Ruhango"],
+ North:["Burera","Gakenke","Gicumbi","Musanze","Rulindo"],
+ East:["Bugesera","Gatsibo","Kayonza","Kirehe","Ngoma","Nyagatare","Rwamagana"],
+ West:["Karongi","Ngororero","Nyabihu","Nyamasheke","Rubavu","Rusizi","Rutsiro"]
 };
 
-function filterDistricts() {
-  const province = document.getElementById("province").value;
-  const districtSelect = document.getElementById("district");
-
-  districtSelect.innerHTML = '<option value="">Hitamo Akarere</option>';
-
-  if (districts[province]) {
-    districts[province].forEach(name => {
-      const option = document.createElement("option");
-      option.value = name;
-      option.textContent = name;
-      districtSelect.appendChild(option);
-    });
-  }
+function updateDistricts(){
+ const p=document.getElementById("province").value;
+ const d=document.getElementById("district");
+ d.innerHTML='<option value="">Hitamo Akarere</option>';
+ (districts[p]||[]).forEach(name=>{
+  const option=document.createElement("option");
+  option.value=name;
+  option.textContent=name;
+  d.appendChild(option);
+ });
 }
-
-function showDistrict() {
-  const province = document.getElementById("province").value;
-  const district = document.getElementById("district").value;
-  const info = document.getElementById("districtInfo");
-
-  info.hidden = false;
-
-  if (!province || !district) {
-    info.textContent = "Banza uhitemo intara n'akarere.";
-    return;
-  }
-
-  info.textContent =
-    "Wahisemo Akarere ka " + district + ", mu " + province +
-    ". Amakuru arambuye y'ibikorwa na serivisi z'aka karere azongerwamo.";
+function showLocation(){
+ const d=document.getElementById("district").value;
+ document.getElementById("mapResult").textContent=d?"Wahisemo Akarere ka "+d+".":"Banza uhitemo Intara n'Akarere.";
 }
-
-// ASK BENJAMIN AI
-document.getElementById("aiForm").addEventListener("submit", async function(event) {
-  event.preventDefault();
-
-  const question = document.getElementById("aiQuestion").value.trim();
-  const answerBox = document.getElementById("aiAnswer");
-
-  if (!question) return;
-
-  answerBox.hidden = false;
-  answerBox.textContent = "Turimo kohereza ikibazo cyawe...";
-
-  /*
-    IYI NI BACKEND ENDPOINT URUGERO.
-
-    Kugira ngo AI ikore koko, ugomba gushyiraho backend
-    ifite endpoint /api/ask. Backend ni yo igomba guhamagara
-    AI provider ikoresheje API key ibitswe mu ibanga.
-
-    Ntushyire API key muri index.html.
-  */
-
-  try {
-    const response = await fetch("/api/ask", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ question: question })
-    });
-
-    if (!response.ok) {
-      throw new Error("AI backend ntiraboneka.");
-    }
-
-    const data = await response.json();
-
-    answerBox.textContent =
-      data.answer || "Nta gisubizo cyabonetse. Ongera ugerageze.";
-  } catch (error) {
-    answerBox.textContent =
-      "ASK BENJAMIN AI ntirahuza na AI backend. " +
-      "Igice cyo kwandikamo ikibazo kirakora, ariko kugira ngo ubone " +
-      "ibisubizo bya AI nyabyo, tugomba kubanza gushyiraho backend " +
-      "no kuyihuza na AI provider.";
-  }
-});
 </script>
-
 </body>
 </html>
