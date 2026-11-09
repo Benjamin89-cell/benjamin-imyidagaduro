@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BENJAMIN AVIATOR DEMO</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #071b2b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+}
+
+h1 {
+  color: #00e676;
+  margin: 15px 0;
+}
+
+.game {
+  position: relative;
+  height: 330px;
+  margin-top: 20px;
+  border: 2px solid #00e676;
+  border-radius: 15px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #123d65, #071b2b);
+}
+
+.multiplier {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  font-size: clamp(40px, 10vw, 75px);
+  font-weight: bold;
+  color: #00e676;
+}
+
+.plane {
+  position: absolute;
+  left: 10%;
+  bottom: 35px;
+  font-size: 55px;
+  transition: left 0.2s linear, bottom 0.2s linear;
+}
+
+button {
+  background: #00e676;
+  color: #062017;
+  border: none;
+  padding: 14px 25px;
+  margin: 15px 5px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00c853;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 15px;
+  color: #ffd54f;
+  font-size: 18px;
+}
+
+.history {
+  margin-top: 25px;
+  background: #102d43;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.history h2 {
+  color: #00e676;
+  margin-bottom: 12px;
+}
+
+.history-item {
+  padding: 10px;
+  border-bottom: 1px solid #345;
+}
+
+.notice {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #b8cbd8;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>✈ BENJAMIN AVIATOR</h1>
+<p>One Platform. Many Solutions.</p>
+
+<div class="game">
+  <div class="multiplier" id="multiplier">1.00x</div>
+  <div class="plane" id="plane">✈️</div>
+</div>
+
+<div class="status" id="status">
+  Kanda Tangira Demo kugira ngo indege iguruke.
+</div>
+
+<button id="startBtn" onclick="start plane()">
+  TANGIRA gukina
+</button>
+
+<button id="resetBtn" onclick="resetGame()" aria-disabled="">
+  ONGERA UTANGIRE
+</button>
+
+<div class="history">
+  <h2>GAME HISTORY</h2>
+  <div id="history">
+    Nta mukino wa  beting uratangira.
+  </div>
+</div>
+
+<p class="notice">
+  .nu mukino wo ku betting
+  na mafara  nyayo ajyajya akoreshwa nyayo hano.
+</p>
+
+</div>
+
+<script>
+let timer = null;
+let startTime = 0;
+let round = 0;
+let running = false;
+
+const multiplier = document.getElementById("multiplier");
+const plane = document.getElementById("plane");
+const statusText = document.getElementById("status");
+const startBtn = document.getElementById("startBtn");
+const resetBtn = document.getElementById("resetBtn");
+const historyBox = document.getElementById("history");
+
+function startGame() {
+  if (running) return;
+
+  running = true;
+  round++;
+  startTime = Date.now();
+
+  startBtn.disabled = true;
+  resetBtn.disabled = true;
+
+  statusText.textContent = "Indege iri kuguruka...";
+
+  timer = setInterval(() => {
+    const elapsed = (Date.now() - startTime) / 1000;
+
+    // Iyi ni animation ihamye ya demo, si uburyo bwo gutega.
+    const value = Math.min(100000, Math.pow(1.65, elapsed));
+
+    multiplier.textContent = value.toFixed(2) + "x";
+
+    const progress = Math.min(elapsed / 25, 1);
+    plane.style.left = (10 + progress * 75) + "%";
+    plane.style.bottom = (35 + progress * 180) + "px";
+
+    if (value >= 100000) {
+      finishGame();
+    }
+  }, 100);
+}
+
+function finishGame() {
+  clearInterval(timer);
+  running = false;
+
+  multiplier.textContent = "100000.00x";
+  statusText.textContent = "Demo deposit! Indege yageze ku mubare ntarengwa.";
+
+  startBtn.disabled = true;
+  resetBtn.disabled = true;
+
+  const item = document.createElement("div");
+  item.className = "history-item";
+  item.textContent = "Round " + round + " — 100000.00x";
+
+  historyBox.prepend(item);
+}
+
+function resetGame() {
+  clearInterval(timer);
+  running = true;
+
+  multiplier.textContent = "1.00x";
+  plane.style.left = "10%";
+  plane.style.bottom = "35px";
+
+  statusText.textContent = "bet now.";
+
+  startBtn.disabled = true;
+  resetBtn.disabled = true;
+}
+</script>
+
+</body>
+</html>
